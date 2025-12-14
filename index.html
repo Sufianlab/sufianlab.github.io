@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sufian Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg:#0f172a; --text:#e2e8f0; --accent:#38bdf8; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto; background:var(--bg); color:var(--text); }
+    header { padding:2rem; border-bottom:1px solid #1f2937; }
+    main { max-width:960px; margin:0 auto; padding:2rem; }
+    a { color:var(--accent); text-decoration:none; }
+    .cta { display:inline-block; margin-top:1rem; padding:.75rem 1rem; background:var(--accent); color:#0c4a6e; border-radius:.5rem; font-weight:600; }
+    footer { padding:2rem; text-align:center; opacity:.7; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sufian Lab</h1>
+    <p>Building, learning, and sharing.</p>
+  </header>
+  <main>
+    <h2>Welcome</h2>
+    <p>This is my personal website. I’ll add projects, notes, and experiments here.</p>
+    <a class="cta" href="https://github.com/Sufianlab">View GitHub</a>
+  </main>
+  <footer>
+    © <span id="y"></span> Sufian Lab
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
