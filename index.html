@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Dr. Abu Sufian | Academic Website</title>
+  <title>About | Dr. Abu Sufian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -21,7 +21,6 @@
       line-height: 1.7;
     }
 
-    /* Header */
     header {
       background: var(--secondary);
       color: white;
@@ -39,17 +38,20 @@
     }
     nav a:hover { color: var(--primary); }
 
-    /* Hero Section */
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: var(--primary);
-      color: white;
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-    .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; max-width: 800px; margin: auto; }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+      border-left: 4px solid var(--primary);
+      padding-left: 0.6rem;
+    }
+    p { margin-bottom: 1rem; }
 
-    /* Footer */
     footer {
       background: var(--secondary);
       color: white;
@@ -57,7 +59,6 @@
       padding: 2rem;
       margin-top: 3rem;
     }
-    footer a { color: var(--primary); text-decoration: none; }
   </style>
 </head>
 
@@ -73,14 +74,43 @@
     <a href="research.html">Research & Publication</a>
     <a href="projects.html">Projects</a>
     <a href="teaching.html">Teaching</a>
-    <a href="teaching.html">Teaching</a>
     <a href="contact.html">Find me</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Welcome to My Academic Website</h2>
-</section>
+<main>
+
+  <h2>About Me</h2>
+
+  <p>
+    I am Dr. Abu Sufian, a researcher (Senior Fellowship) at the National Research Council of Italy (CNR), 
+    Institute of Applied Sciences and Intelligent Systems (CNR-ISASI). Since 2024, I have been contributing 
+    to the national consortium project Future Artificial Intelligence Research (FAIR, 2023–2025), focusing 
+    on the development of responsible and trustworthy AI systems.
+  </p>
+
+  <p>
+    I have over 14 years of academic experience, including nine years as an Assistant Professor at the 
+    University of Gour Banga, India, where I also served as Head of the Department of Computer Science 
+    and led curriculum development initiatives. I earned my Ph.D. in Computer Science from 
+    Visva-Bharati University, India.
+  </p>
+
+  <p>
+    My research is driven by the goal of making AI more equitable and transparent. I work at the intersection 
+    of Computer Vision, Deep Learning, and Generative AI, with applications in Biometrics, Media Forensics, 
+    and Healthcare, emphasizing AI Fairness, Bias Mitigation, and Explainability. I believe impactful innovation 
+    emerges from interdisciplinary collaboration, and I actively engage with researchers across diverse domains.
+  </p>
+
+  <p>
+    I have authored 50+ peer-reviewed publications in leading venues, including IEEE Access, Pattern Recognition, 
+    Knowledge-Based Systems, ICCV, and ECCV, with 2,600+ citations (Google Scholar). I am a Senior Member of IEEE 
+    and a Lifetime Member of the Computer Society of India, and I actively contribute to the research community 
+    through international workshops and professional service.
+  </p>
+
+</main>
 
 <footer>
   © <span id="year"></span> Dr. Abu Sufian · Academic Website
@@ -92,3 +122,4 @@
 
 </body>
 </html>
+
