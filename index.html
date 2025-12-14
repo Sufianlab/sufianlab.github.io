@@ -4,29 +4,137 @@
   <meta charset="utf-8">
   <title>Sufian Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0f172a; --text:#e2e8f0; --accent:#38bdf8; }
-    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto; background:var(--bg); color:var(--text); }
-    header { padding:2rem; border-bottom:1px solid #1f2937; }
-    main { max-width:960px; margin:0 auto; padding:2rem; }
-    a { color:var(--accent); text-decoration:none; }
-    .cta { display:inline-block; margin-top:1rem; padding:.75rem 1rem; background:var(--accent); color:#0c4a6e; border-radius:.5rem; font-weight:600; }
-    footer { padding:2rem; text-align:center; opacity:.7; }
+    :root {
+      --bg: #f9fafb;
+      --text: #111827;
+      --primary: #2563eb;
+      --secondary: #1f2937;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--secondary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { font-size: 1.5rem; }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover { color: var(--primary); }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--primary);
+      color: white;
+    }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section { margin-bottom: 3rem; }
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .card h4 { margin-bottom: 0.5rem; }
+    .card a { color: var(--primary); text-decoration: none; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--secondary);
+      color: white;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Sufian Lab</h1>
-    <p>Building, learning, and sharing.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Sufian Lab</h2>
+    <p>Exploring code, ideas, and projects — all in one place.</p>
+  </section>
+
+  <!-- Main Content -->
   <main>
-    <h2>Welcome</h2>
-    <p>This is my personal website. I’ll add projects, notes, and experiments here.</p>
-    <a class="cta" href="https://github.com/Sufianlab">View GitHub</a>
+    <!-- About -->
+    <section>
+      <h3>About Me</h3>
+      <p>Hello! I’m Sufian. This is my personal website where I share my projects, experiments, and learning journey. Stay tuned for updates!</p>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h3>Featured Projects</h3>
+      <div class="projects">
+        <div class="card">
+          <h4>Project One</h4>
+          <p>A cool description of your first project.</p>
+          <a href="https://github.com/Sufianlab">View on GitHub →</a>
+        </div>
+        <div class="card">
+          <h4>Project Two</h4>
+          <p>Another project you’re proud of.</p>
+          <a href="https://github.com/Sufianlab">View on GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h3>Contact</h3>
+      <p>Want to connect? Reach me at <a href="mailto:yourname@example.com">yourname@example.com</a> or find me on <a href="https://github.com/Sufianlab">GitHub</a>.</p>
+    </section>
   </main>
+
+  <!-- Footer -->
   <footer>
-    © <span id="y"></span> Sufian Lab
+    © <span id="year"></span> Sufian Lab · Built with ❤️ on GitHub Pages
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
