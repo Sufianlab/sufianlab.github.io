@@ -2,50 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Sufian Lab</title>
+  <title>Dr. Abu Sufian | Academic Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg: #f9fafb;
-      --text: #111827;
+      --text: #1f2937;
       --primary: #2563eb;
-      --secondary: #1f2937;
+      --secondary: #111827;
+      --card-bg: #ffffff;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background: var(--secondary);
       color: white;
-      padding: 1rem 2rem;
+      padding: 1.2rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    header h1 { font-size: 1.5rem; }
+    header h1 { font-size: 1.6rem; font-weight: 700; }
     nav a {
       color: white;
-      margin-left: 1rem;
+      margin-left: 1.2rem;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
     nav a:hover { color: var(--primary); }
+
     .hero {
-      text-align: center;
       padding: 4rem 2rem;
+      text-align: center;
       background: var(--primary);
       color: white;
     }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; }
+    .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; max-width: 800px; margin: auto; }
+
     main {
-      max-width: 960px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
@@ -54,87 +57,150 @@
       font-size: 1.8rem;
       margin-bottom: 1rem;
       color: var(--secondary);
+      border-left: 4px solid var(--primary);
+      padding-left: 0.6rem;
     }
-    .projects {
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
     .card {
-      background: white;
-      border: 1px solid #e5e7eb;
+      background: var(--card-bg);
+      padding: 1.2rem;
       border-radius: 8px;
-      padding: 1rem;
+      border: 1px solid #e5e7eb;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .card h4 { margin-bottom: 0.5rem; }
-    .card a { color: var(--primary); text-decoration: none; }
+    .card h4 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .card p { font-size: 0.95rem; }
+
+    ul { margin-left: 1.2rem; }
+    li { margin-bottom: 0.4rem; }
+
     footer {
-      text-align: center;
-      padding: 2rem;
       background: var(--secondary);
       color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
     }
     footer a { color: var(--primary); text-decoration: none; }
   </style>
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <h1>Sufian Lab</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Welcome to Sufian Lab</h2>
-    <p>Exploring code, ideas, and projects — all in one place.</p>
+<body>
+
+<header>
+  <h1>Dr. Abu Sufian</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Senior Research Fellow in Artificial Intelligence</h2>
+  <p>National Research Council of Italy (CNR-ISASI), Lecce, Italy  
+     | Assistant Professor (on sabbatical), University of Gour Banga, India</p>
+</section>
+
+<main>
+
+  <!-- Career Summary -->
+  <section>
+    <h3>Career Summary</h3>
+    <p>
+      I am a researcher and academic with over 10 years of experience in Artificial Intelligence, 
+      Computer Vision, Deep Learning, and Responsible AI. I have authored 
+      <strong>49 publications</strong> with international collaborations, supervised 
+      <strong>34 M.Sc. students</strong>, and currently supervise <strong>4 Ph.D. scholars</strong>.  
+      My work has received over <strong>2600+ citations</strong> on Google Scholar.
+    </p>
   </section>
 
-  <!-- Main Content -->
-  <main>
-    <!-- About -->
-    <section>
-      <h3>About Me</h3>
-      <p>Hello! I’m Sufian. This is my personal website where I share my projects, experiments, and learning journey. Stay tuned for updates!</p>
-    </section>
+  <!-- Research Areas -->
+  <section>
+    <h3>Research Domains</h3>
+    <div class="grid">
+      <div class="card"><h4>Computer Vision</h4></div>
+      <div class="card"><h4>Deep Learning</h4></div>
+      <div class="card"><h4>Generative AI</h4></div>
+      <div class="card"><h4>Explainable AI</h4></div>
+      <div class="card"><h4>Fairness & Responsible AI</h4></div>
+      <div class="card"><h4>Media Forensics</h4></div>
+      <div class="card"><h4>Healthcare AI</h4></div>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section>
-      <h3>Featured Projects</h3>
-      <div class="projects">
-        <div class="card">
-          <h4>Project One</h4>
-          <p>A cool description of your first project.</p>
-          <a href="https://github.com/Sufianlab">View on GitHub →</a>
-        </div>
-        <div class="card">
-          <h4>Project Two</h4>
-          <p>Another project you’re proud of.</p>
-          <a href="https://github.com/Sufianlab">View on GitHub →</a>
-        </div>
-      </div>
-    </section>
+  <!-- Experience -->
+  <section>
+    <h3>Experience</h3>
+    <ul>
+      <li><strong>Senior Research Fellow (AI)</strong>, CNR-ISASI, Italy (2024–Present)</li>
+      <li><strong>Assistant Professor (Computer Science)</strong>, University of Gour Banga, India (2016–Present)</li>
+      <li><strong>Assistant Teacher (Mathematics)</strong>, West Bengal, India (2011–2016)</li>
+      <li><strong>Block Social Audit Coordinator</strong>, MGNREGA Project (2010–2011)</li>
+    </ul>
+  </section>
 
-    <!-- Contact -->
-    <section>
-      <h3>Contact</h3>
-      <p>Want to connect? Reach me at <a href="mailto:yourname@example.com">yourname@example.com</a> or find me on <a href="https://github.com/Sufianlab">GitHub</a>.</p>
-    </section>
-  </main>
+  <!-- Publications -->
+  <section>
+    <h3>Selected Publications</h3>
+    <p>Full list available on the Publications page.</p>
+    <ul>
+      <li><strong>DemoFace</strong> – Pattern Recognition, Elsevier (2025)</li>
+      <li><strong>Explainable Deepfake Detection</strong> – IVC, Elsevier (2025)</li>
+      <li><strong>BDNet</strong> – Journal of KSU Computer & Information Sciences (2022)</li>
+      <li><strong>Survey on Deep Transfer Learning</strong> – Journal of Systems Architecture (2020)</li>
+    </ul>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    © <span id="year"></span> Sufian Lab · Built with ❤️ on GitHub Pages
-  </footer>
+  <!-- Grants -->
+  <section>
+    <h3>Projects & Grants</h3>
+    <ul>
+      <li><strong>FAIR Project (EU NextGenerationEU)</strong> – €581,949.52 | CNR Unit Researcher</li>
+      <li><strong>BSM-DND</strong> – King Faisal University, Saudi Arabia</li>
+      <li><strong>EETO-GA</strong> – Ministry of Education, Saudi Arabia</li>
+      <li><strong>TFBN</strong> – Ministry of Education, Saudi Arabia</li>
+    </ul>
+  </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Teaching -->
+  <section>
+    <h3>Teaching Areas</h3>
+    <ul>
+      <li>Artificial Intelligence, Machine Learning, Deep Learning</li>
+      <li>Computer Vision</li>
+      <li>Data Structures & Algorithms</li>
+      <li>Mathematics for Computing</li>
+      <li>Java & Python Programming</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:sufian@ieee.org">sufian@ieee.org</a> | <a href="mailto:abusufian@cnr.it">abusufian@cnr.it</a></p>
+    <p>ORCID: 0000-0003-2035-2938</p>
+    <p>GitHub: <a href="https://github.com/Sufianlab">github.com/Sufianlab</a></p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Dr. Abu Sufian · Academic Website
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
