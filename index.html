@@ -1,1 +1,129 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <title>Dr. Abu Sufian | Academic Website</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> <style> :root { --bg: #f9fafb; --text: #1f2937; --primary: #2563eb; --secondary: #111827; } * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; } /* Header */ header { background: var(--secondary); color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; } header h1 { font-size: 1.6rem; font-weight: 700; } nav a { color: white; margin-left: 1.2rem; text-decoration: none; font-weight: 500; } nav a:hover { color: var(--primary); } /* Hero Section */ .hero { padding: 4rem 2rem; text-align: center; background: var(--primary); color: white; } .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; } .hero p { font-size: 1.2rem; max-width: 800px; margin: auto; } /* Footer */ footer { background: var(--secondary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; } footer a { color: var(--primary); text-decoration: none; } </style> </head> <body> <header> <h1>Dr. Abu Sufian</h1> <nav> <a href="about.html">About</a> <a href="research.html">Experience</a> <a href="research.html">Formal Education</a> <a href="research.html">Research</a> <a href="research.html">Research & Publication</a> <a href="projects.html">Projects</a> <a href="teaching.html">Teaching</a> <a href="teaching.html">Teaching</a> <a href="contact.html">Find me</a> </nav> </header> <section class="hero"> <h2>Welcome to My Academic Website</h2> </section> <footer> © <span id="year"></span> Dr. Abu Sufian · Academic Website </footer> <script> document.getElementById('year').textContent = new Date().getFullYear(); </script> </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dr. Abu Sufian | Academic Website</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --primary: #2563eb;
+      --secondary: #111827;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: var(--secondary);
+      color: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.2rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: var(--primary);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Dr. Abu Sufian</h1>
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="research.html">Experience</a>
+      <a href="research.html">Formal Education</a>
+      <a href="research.html">Research</a>
+      <a href="research.html">Research &amp; Publication</a>
+      <a href="projects.html">Projects</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Find me</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to My Academic Website</h2>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Dr. Abu Sufian · Academic Website
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
