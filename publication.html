@@ -7,38 +7,120 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --primary: #2563eb;
+      --secondary: #111827;
+      --card-bg: #ffffff;
+      --shadow: rgba(0,0,0,0.08);
+    }
+
     body {
       font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
       line-height: 1.7;
-      margin: 2rem;
-      max-width: 900px;
     }
-    a {
-      color: #2563eb;
+
+    /* Header */
+    header {
+      background: var(--secondary);
+      color: white;
+      padding: 1.2rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--secondary);
+    }
+
+    /* Link Cards */
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      margin: 1.2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--shadow);
+      max-width: 600px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card a {
+      font-size: 1.2rem;
       font-weight: 600;
+      color: var(--primary);
       text-decoration: none;
     }
-    a:hover {
+
+    .card a:hover {
       text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 
 <body>
 
-<h2>Research Profiles</h2>
+<header>
+  <h1>Research & Publication Profiles</h1>
+</header>
 
-<p>
-  <a href="https://scholar.google.co.in/citations?hl=en&user=MZE2VskAAAAJ&sortby=pubdate&view_op=list_works" target="_blank">
-    Google Scholar Page
-  </a>
-</p>
+<div class="container">
+  <h2>Explore My Research Contributions</h2>
 
-<p>
-  <a href="https://www.scopus.com/authid/detail.uri?authorId=57136686600" target="_blank">
-    Scopus Page
-  </a>
-</p>
+  <div class="card">
+    <a href="https://scholar.google.co.in/citations?hl=en&user=MZE2VskAAAAJ&sortby=pubdate&view_op=list_works" target="_blank">
+      Google Scholar Profile →
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=57136686600" target="_blank">
+      Scopus Author Page →
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Dr. Abu Sufian · Academic Website
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
