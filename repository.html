@@ -77,6 +77,27 @@
       text-decoration: underline;
     }
 
+    /* Return Home Button */
+    .home-link {
+      margin-top: 2rem;
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.8rem 1.4rem;
+      border-radius: 8px;
+      background: var(--card-bg);
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .home-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-decoration: underline;
+    }
+
     footer {
       background: var(--secondary);
       color: white;
@@ -101,6 +122,9 @@
       Visit My GitHub Profile →
     </a>
   </div>
+
+  <!-- Return Home Page Link -->
+  <a class="home-link" href="index.html">Return Home Page</a>
 
 </div>
 
