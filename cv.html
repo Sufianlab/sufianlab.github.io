@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>CV | Dr. Abu Sufian</title>
+
+  <!-- Prevent indexing of this page only -->
+  <meta name="robots" content="noindex, nofollow">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -28,7 +32,7 @@
     header {
       background: var(--secondary);
       color: white;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 2rem;
       text-align: center;
     }
 
@@ -47,27 +51,26 @@
 
     .card {
       background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px var(--shadow);
-      max-width: 600px;
+      padding: 2.2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+      max-width: 620px;
       margin: auto;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    .card p {
+      font-size: 1.1rem;
+      margin-bottom: 1.4rem;
     }
 
-    a {
-      font-size: 1.2rem;
+    .card a {
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--primary);
       text-decoration: none;
     }
 
-    a:hover {
+    .card a:hover {
       text-decoration: underline;
     }
 
@@ -75,21 +78,20 @@
     .home-link {
       margin-top: 2rem;
       display: inline-block;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--primary);
       text-decoration: none;
-      padding: 0.8rem 1.4rem;
-      border-radius: 8px;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
       background: var(--card-bg);
       box-shadow: 0 4px 12px var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
     }
 
     .home-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-      text-decoration: underline;
+      background: #eef2ff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
 
     footer {
@@ -97,7 +99,8 @@
       color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
+      margin-top: 3.5rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -109,17 +112,19 @@
 </header>
 
 <div class="container">
+
   <div class="card">
-    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-      You can view my full CV using the link below.
+    <p>
+      You can view my complete curriculum vitae using the link below.
     </p>
 
-    <!-- Replace 'cv.pdf' with your actual uploaded PDF filename -->
-    <a href="cv.pdf" target="_blank">View CV (PDF) →</a>
+    <!-- Replace 'cv.pdf' with your actual PDF filename -->
+    <a href="cv.pdf" target="_blank" rel="noopener">
+      View CV (PDF) →
+    </a>
   </div>
 
-  <!-- Return Home Page Link -->
-  <a class="home-link" href="index.html"> ← Return to Home Page</a>
+  <a class="home-link" href="index.html">← Return to Home Page</a>
 
 </div>
 
