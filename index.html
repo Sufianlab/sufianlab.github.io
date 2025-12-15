@@ -18,6 +18,10 @@
       --text: #1f2937;
       --primary: #2563eb;
       --secondary: #111827;
+
+      /* New hero text colors */
+      --hero-welcome: #dbeafe;   /* soft light blue */
+      --hero-name: #fde68a;      /* warm gold highlight */
     }
 
     * {
@@ -43,11 +47,6 @@
       align-items: center;
     }
 
-    header h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
     nav a {
       color: white;
       margin-left: 1.2rem;
@@ -64,18 +63,30 @@
       padding: 4rem 2rem;
       text-align: center;
       background: var(--primary);
-      color: white;
+      color: white; /* default stays white */
     }
 
+    /* Welcome line */
+    .hero h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      color: var(--hero-welcome);
+      font-weight: 500;
+    }
+
+    /* Name highlight */
     .hero h2 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       margin-bottom: 1rem;
+      color: var(--hero-name);
+      font-weight: 700;
     }
 
-    .hero p {
+    /* Remaining text stays unchanged */
+    .hero h1 {
       font-size: 1.2rem;
-      max-width: 800px;
-      margin: auto;
+      font-weight: 400;
+      margin-top: 0.4rem;
     }
 
     /* Footer */
@@ -86,18 +97,12 @@
       padding: 2rem;
       margin-top: 3rem;
     }
-
-    footer a {
-      color: var(--primary);
-      text-decoration: none;
-    }
   </style>
 </head>
 
 <body>
 
   <header>
-
     <nav>
       <a href="about.html">About</a>
       <a href="experience.html">Experience</a>
