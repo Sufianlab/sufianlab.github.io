@@ -18,7 +18,6 @@
       --text: #1f2937;
       --primary: #2563eb;
       --secondary: #111827;
-
       --hero-welcome: #dbeafe;
       --hero-name: #fde68a;
     }
@@ -56,11 +55,21 @@
       color: var(--primary);
     }
 
+    /* ===== Split Layout ===== */
+    .split-layout {
+      display: flex;
+      min-height: calc(100vh - 80px);
+    }
+
+    /* Left: Hero */
     .hero {
-      padding: 4rem 2rem;
-      text-align: center;
+      flex: 1;
+      padding: 4rem 3rem;
       background: var(--primary);
       color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero h3 {
@@ -78,20 +87,20 @@
     }
 
     .hero h1 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 400;
       margin-top: 0.4rem;
     }
 
-    /* Visitor Map Section */
+    /* Right: Visitor Map */
     .visitor-map {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem 1.5rem;
-      text-align: center;
+      flex: 1;
       background: white;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 2rem;
     }
 
     .visitor-map h2 {
@@ -100,44 +109,60 @@
       color: var(--secondary);
     }
 
-    /* Globe scaling */
     .globe-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: scale(0.65);   /* 🔽 Adjust size here */
+      transform: scale(0.6);
       transform-origin: top center;
-      margin-top: -20px;        /* tighten vertical space */
+      margin-top: -10px;
     }
 
+    /* Footer */
     footer {
       background: var(--secondary);
       color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
+    }
+
+    /* ===== Responsive (Mobile) ===== */
+    @media (max-width: 900px) {
+      .split-layout {
+        flex-direction: column;
+      }
+
+      .hero, .visitor-map {
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+
+      .globe-wrapper {
+        transform: scale(0.55);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="education.html">Formal Education</a>
-      <a href="publication.html">Research & Publication</a>
-      <a href="repository.html">GitHub Repository</a>
-      <a href="project.html">Project</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="cv.html">CV</a>
-      <a href="find.html">Find Me</a>
-      <a href="news.html">News</a>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Formal Education</a>
+    <a href="publication.html">Research & Publication</a>
+    <a href="repository.html">GitHub Repository</a>
+    <a href="project.html">Project</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="cv.html">CV</a>
+    <a href="find.html">Find Me</a>
+    <a href="news.html">News</a>
+  </nav>
+</header>
 
-  <section class="hero">
+<!-- Split Layout -->
+<section class="split-layout">
+
+  <!-- Left: Hero -->
+  <div class="hero">
     <h3>Welcome to My Academic Website</h3>
     <h2>Dr. Abu Sufian</h2>
     <h1>Postdoctoral Researcher (Senior Fellowship)</h1>
@@ -145,12 +170,11 @@
     <h3>&</h3>
     <h1>Assistant Professor (Currently on Sabbatical)</h1>
     <h1>Department of Computer Science, University of Gour Banga, India</h1>
-  </section>
+  </div>
 
-  <!-- Visitor Map -->
-  <section class="visitor-map">
+  <!-- Right: Visitor Map -->
+  <div class="visitor-map">
     <h2>Visitor Map</h2>
-
     <div class="globe-wrapper">
       <script
         type="text/javascript"
@@ -158,15 +182,17 @@
         src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
       </script>
     </div>
-  </section>
+  </div>
 
-  <footer>
-    © <span id="year"></span> Dr. Abu Sufian · Academic Website
-  </footer>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer>
+  © <span id="year"></span> Dr. Abu Sufian · Academic Website
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
