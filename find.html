@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Find Me | Dr. Abu Sufian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -12,8 +12,10 @@
       --text: #1f2937;
       --primary: #2563eb;
       --secondary: #111827;
+      --muted: #6b7280;
       --card-bg: #ffffff;
-      --shadow: rgba(0,0,0,0.08);
+      --shadow-soft: rgba(0,0,0,0.06);
+      --shadow-hover: rgba(0,0,0,0.12);
     }
 
     body {
@@ -21,8 +23,7 @@
       background: var(--bg);
       color: var(--text);
       margin: 0;
-      padding: 0;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
     /* Fixed Home Link */
@@ -30,21 +31,20 @@
       position: fixed;
       top: 1.2rem;
       left: 1.2rem;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--primary);
       text-decoration: none;
       padding: 0.45rem 0.9rem;
       border-radius: 999px;
       background: white;
-      box-shadow: 0 2px 8px var(--shadow);
+      box-shadow: 0 2px 8px var(--shadow-soft);
       z-index: 1000;
-      transition: background 0.2s ease, box-shadow 0.2s ease;
     }
 
     .home-link:hover {
       background: #eef2ff;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 14px var(--shadow-hover);
     }
 
     /* Header */
@@ -62,55 +62,69 @@
       letter-spacing: -0.02em;
     }
 
+    header p {
+      margin-top: 0.6rem;
+      font-size: 1.05rem;
+      color: #d1d5db;
+    }
+
     /* Content */
     .container {
-      max-width: 900px;
+      max-width: 860px;
       margin: 3.5rem auto;
       padding: 0 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
       text-align: center;
     }
 
-    h2 {
-      font-size: 1.85rem;
-      margin-bottom: 2.2rem;
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.8rem;
       color: var(--secondary);
+      font-weight: 700;
     }
 
     /* Cards */
     .card {
       background: var(--card-bg);
-      padding: 2rem;
+      padding: 1.9rem 2.2rem;
       border-radius: 14px;
-      box-shadow: 0 6px 18px var(--shadow);
-      max-width: 620px;
-      margin: 1.5rem auto;
+      box-shadow: 0 4px 14px var(--shadow-soft);
+      max-width: 600px;
+      margin: 1.2rem auto;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px var(--shadow-hover);
     }
 
     .card a {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--primary);
       text-decoration: none;
       display: block;
-      margin: 0.4rem 0;
+      margin: 0.35rem 0;
     }
 
     .card a:hover {
       text-decoration: underline;
     }
 
-    /* Email card */
+    /* Email Card */
     .email-card p {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      color: var(--secondary);
+      color: var(--muted);
       margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     /* Footer */
@@ -127,47 +141,54 @@
 
 <body>
 
-<!-- Return Home Page Link -->
 <a class="home-link" href="index.html">← Return to Home Page</a>
 
 <header>
-  <h1>Find Me Online</h1>
+  <h1>Find Me</h1>
+  <p>Professional & Academic Contact Information</p>
 </header>
 
 <div class="container">
 
-  <!-- Email Section -->
-  <div class="card email-card">
-    <p>Email</p>
-    <a href="mailto:sufian@ieee.org">sufian@ieee.org</a>
-    <a href="mailto:abusufian@cnr.it">abusufian@cnr.it</a>
-    <a href="mailto:sufian@ugb.ac.in">sufian@ugb.ac.in</a>
+  <!-- Contact Section -->
+  <div class="section">
+    <h2>Contact</h2>
+
+    <div class="card email-card">
+      <p>Email</p>
+      <a href="mailto:sufian@ieee.org">sufian@ieee.org</a>
+      <a href="mailto:abusufian@cnr.it">abusufian@cnr.it</a>
+      <a href="mailto:sufian@ugb.ac.in">sufian@ugb.ac.in</a>
+    </div>
   </div>
 
-  <h2>Professional Profiles</h2>
+  <!-- Profiles Section -->
+  <div class="section">
+    <h2>Professional Profiles</h2>
 
-  <div class="card">
-    <a href="https://www.linkedin.com/in/a-sufian-251814115/" target="_blank">
-      LinkedIn Profile →
-    </a>
-  </div>
+    <div class="card">
+      <a href="https://www.linkedin.com/in/a-sufian-251814115/" target="_blank">
+        LinkedIn Profile →
+      </a>
+    </div>
 
-  <div class="card">
-    <a href="https://orcid.org/0000-0003-2035-2938" target="_blank">
-      ORCID Profile →
-    </a>
-  </div>
+    <div class="card">
+      <a href="https://orcid.org/0000-0003-2035-2938" target="_blank">
+        ORCID Profile →
+      </a>
+    </div>
 
-  <div class="card">
-    <a href="https://www.cnr.it/trasparenza/consulenti-collaboratori/documento/ugov/19295/curriculumoscurato.pdf" target="_blank">
-      CNR-ISASI Affiliation Page →
-    </a>
-  </div>
+    <div class="card">
+      <a href="https://www.cnr.it/trasparenza/consulenti-collaboratori/documento/ugov/19295/curriculumoscurato.pdf" target="_blank">
+        CNR-ISASI Affiliation →
+      </a>
+    </div>
 
-  <div class="card">
-    <a href="https://www.ugb.ac.in/Ugb_Department_of_Computer_Science_faculty.php?p=2436" target="_blank">
-      University of Gour Banga Profile →
-    </a>
+    <div class="card">
+      <a href="https://www.ugb.ac.in/Ugb_Department_of_Computer_Science_faculty.php?p=2436" target="_blank">
+        University of Gour Banga Profile →
+      </a>
+    </div>
   </div>
 
 </div>
