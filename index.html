@@ -31,17 +31,23 @@
     header {
       background: var(--secondary);
       color: white;
-      padding: 1.4rem 2.2rem;
+      padding: 1.3rem 2rem;
     }
 
-    /* 🔹 Header navigation: larger & clearer */
+    /* 🔹 Header navigation (tightened spacing) */
+    nav {
+      display: flex;
+      flex-wrap: nowrap; /* ⬅️ force single line on desktop */
+    }
+
     nav a {
       color: white;
-      margin-right: 1.6rem;
+      margin-right: 1.1rem;        /* ⬅️ reduced spacing */
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.05rem;          /* ⬅ increased */
-      letter-spacing: 0.02em;      /* ⬅ cleaner look */
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -63,13 +69,14 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      text-align: left;
     }
 
     .hero h3 {
       color: var(--hero-welcome);
       font-size: 1.4rem;
       font-weight: 500;
-      margin: 0.6rem 0;            /* ⬅ unified vertical spacing */
+      margin: 0.6rem 0;
     }
 
     .hero h2 {
@@ -82,7 +89,16 @@
     .hero h1 {
       font-size: 1.15rem;
       font-weight: 400;
-      margin: 0.5rem 0;            /* ⬅ consistent spacing */
+      margin: 0.5rem 0;
+    }
+
+    /* Centered ampersand */
+    .hero .ampersand {
+      text-align: center;          /* ⬅️ centered */
+      font-size: 1.4rem;
+      margin: 0.6rem 0;            /* ⬅️ same vertical spacing */
+      font-weight: 500;
+      color: var(--hero-welcome);
     }
 
     /* Right: Visitor Map */
@@ -105,8 +121,13 @@
         grid-template-columns: 1fr;
       }
 
+      nav {
+        flex-wrap: wrap; /* allow wrap on mobile */
+      }
+
       nav a {
         font-size: 1rem;
+        margin-bottom: 0.4rem;
       }
 
       .hero,
@@ -143,7 +164,9 @@
     <h2>Dr. Abu Sufian</h2>
     <h1>Postdoctoral Researcher (Senior Fellowship)</h1>
     <h1>National Research Council of Italy – CNR-ISASI, Lecce, Italy</h1>
-    <h3>&</h3>
+
+    <div class="ampersand">&</div>
+
     <h1>Assistant Professor (Currently on Sabbatical)</h1>
     <h1>Department of Computer Science, University of Gour Banga, India</h1>
   </div>
