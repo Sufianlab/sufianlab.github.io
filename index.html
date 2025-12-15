@@ -20,12 +20,17 @@
       --hero-name: #fde68a;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
+      line-height: 1.7;
     }
 
     header {
@@ -41,7 +46,9 @@
       font-weight: 500;
     }
 
-    nav a:hover { color: var(--primary); }
+    nav a:hover {
+      color: var(--primary);
+    }
 
     /* ===== Split Layout ===== */
     .split-layout {
@@ -54,23 +61,23 @@
     .hero {
       background: var(--primary);
       color: white;
-      padding: 4rem 3.5rem 4.5rem; /* ⬅️ more top bias */
+      padding: 3.5rem 3rem 4rem;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* ⬅️ move content upward */
+      justify-content: flex-start; /* move text upward */
     }
 
     .hero h3 {
-      color: var(--hero-welcome);
       font-size: 1.4rem;
       margin-bottom: 0.6rem;
+      color: var(--hero-welcome);
       font-weight: 500;
     }
 
     .hero h2 {
-      color: var(--hero-name);
       font-size: 2.6rem;
       margin-bottom: 1rem;
+      color: var(--hero-name);
       font-weight: 700;
     }
 
@@ -82,7 +89,7 @@
 
     /* Right: Visitor Map */
     .visitor-map {
-      background: #ffffff;
+      background: white;
       padding: 2.5rem 2rem;
       text-align: center;
     }
@@ -93,6 +100,12 @@
       color: var(--secondary);
     }
 
+    /* 🔑 SAFE globe size control */
+    #clstr_globe {
+      zoom: 0.65;        /* ⬅ Adjust size here */
+      margin: 0 auto;
+    }
+
     footer {
       background: var(--secondary);
       color: white;
@@ -100,15 +113,20 @@
       padding: 2rem;
     }
 
-    /* Responsive */
+    /* ===== Responsive ===== */
     @media (max-width: 900px) {
       .split-layout {
         grid-template-columns: 1fr;
       }
 
-      .hero, .visitor-map {
+      .hero,
+      .visitor-map {
         padding: 3rem 2rem;
         text-align: center;
+      }
+
+      #clstr_globe {
+        zoom: 0.55; /* smaller on mobile */
       }
     }
   </style>
@@ -133,7 +151,7 @@
 
 <section class="split-layout">
 
-  <!-- Left -->
+  <!-- Left: Hero -->
   <div class="hero">
     <h3>Welcome to My Academic Website</h3>
     <h2>Dr. Abu Sufian</h2>
@@ -146,11 +164,14 @@
 
   <!-- Right: Visitor Map -->
   <div class="visitor-map">
+    <h2>Visitor Map</h2>
+
     <script
       type="text/javascript"
       id="clstr_globe"
       src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
     </script>
+
   </div>
 
 </section>
