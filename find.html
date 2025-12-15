@@ -25,48 +25,71 @@
       line-height: 1.8;
     }
 
+    /* Fixed Home Link */
+    .home-link {
+      position: fixed;
+      top: 1.2rem;
+      left: 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: white;
+      box-shadow: 0 2px 8px var(--shadow);
+      z-index: 1000;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .home-link:hover {
+      background: #eef2ff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
     /* Header */
     header {
       background: var(--secondary);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem 2.5rem;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
-    /* Container */
+    /* Content */
     .container {
       max-width: 900px;
-      margin: 3rem auto;
+      margin: 3.5rem auto;
       padding: 0 1.5rem;
       text-align: center;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+      font-size: 1.85rem;
+      margin-bottom: 2.5rem;
       color: var(--secondary);
     }
 
     /* Cards */
     .card {
       background: var(--card-bg);
-      padding: 1.8rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px var(--shadow);
-      max-width: 600px;
-      margin: 1.2rem auto;
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+      max-width: 620px;
+      margin: 1.5rem auto;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
     }
 
     .card a {
@@ -80,39 +103,22 @@
       text-decoration: underline;
     }
 
-    /* Return Home Button */
-    .home-link {
-      margin-top: 2rem;
-      display: inline-block;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--primary);
-      text-decoration: none;
-      padding: 0.8rem 1.4rem;
-      border-radius: 8px;
-      background: var(--card-bg);
-      box-shadow: 0 4px 12px var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .home-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-      text-decoration: underline;
-    }
-
     /* Footer */
     footer {
       background: var(--secondary);
       color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 
 <body>
+
+<!-- Return Home Page Link -->
+<a class="home-link" href="index.html">← Return to Home Page</a>
 
 <header>
   <h1>Find Me Online</h1>
@@ -121,41 +127,16 @@
 <div class="container">
 
   <div class="card">
-    <a href="https://www.linkedin.com/in/a-sufian-251814115/">
+    <a href="https://www.linkedin.com/in/a-sufian-251814115/" target="_blank">
       LinkedIn Profile →
     </a>
   </div>
 
   <div class="card">
-    <a href="https://orcid.org/0000-0003-2035-2938">
+    <a href="https://orcid.org/0000-0003-2035-2938" target="_blank">
       ORCID Profile →
     </a>
   </div>
 
   <div class="card">
-    <a href="https://www.cnr.it/trasparenza/consulenti-collaboratori/documento/ugov/19295/curriculumoscurato.pdf">
-      CNR-ISASI Affiliation Page →
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="https://www.ugb.ac.in/Ugb_Department_of_Computer_Science_faculty.php?p=2436">
-      UGB Affiliation Page →
-    </a>
-  </div>
-
-  <!-- Return Home Page Link -->
-  <a class="home-link" href="index.html"> ← Return to Home Page</a>
-
-</div>
-
-<footer>
-  © <span id="year"></span> Dr. Abu Sufian · Academic Website
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+    <a href="https://www.cnr.it/trasparenza/consulenti-collaboratori/documento/ugov/19295/curriculumoscurato.pdf" target="_blan_
