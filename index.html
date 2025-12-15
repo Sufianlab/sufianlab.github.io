@@ -96,8 +96,18 @@
 
     .visitor-map h2 {
       font-size: 1.6rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       color: var(--secondary);
+    }
+
+    /* Globe scaling */
+    .globe-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.65);   /* 🔽 Adjust size here */
+      transform-origin: top center;
+      margin-top: -20px;        /* tighten vertical space */
     }
 
     footer {
@@ -141,12 +151,13 @@
   <section class="visitor-map">
     <h2>Visitor Map</h2>
 
-    <!-- ClustrMaps Globe Widget -->
-    <script
-      type="text/javascript"
-      id="clstr_globe"
-      src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
-    </script>
+    <div class="globe-wrapper">
+      <script
+        type="text/javascript"
+        id="clstr_globe"
+        src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
+      </script>
+    </div>
   </section>
 
   <footer>
