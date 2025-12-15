@@ -25,53 +25,72 @@
       line-height: 1.8;
     }
 
+    /* Fixed Home Link */
+    .home-link {
+      position: fixed;
+      top: 1.2rem;
+      left: 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: white;
+      box-shadow: 0 2px 8px var(--shadow);
+      z-index: 1000;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .home-link:hover {
+      background: #eef2ff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    /* Header */
     header {
       background: var(--secondary);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem 2.5rem;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
+    /* Content */
     .container {
       max-width: 900px;
-      margin: 3rem auto;
+      margin: 3.5rem auto;
       padding: 0 1.5rem;
-      text-align: center;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+      font-size: 1.85rem;
+      margin-bottom: 2.5rem;
       color: var(--secondary);
+      text-align: center;
     }
 
     .card {
       background: var(--card-bg);
-      padding: 1.8rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px var(--shadow);
-      max-width: 800px;
-      margin: 1.2rem auto;
+      padding: 2.2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+      max-width: 820px;
+      margin: 1.6rem auto;
       text-align: left;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
     .project-title {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
 
     .label {
@@ -79,38 +98,27 @@
       color: var(--secondary);
     }
 
-    /* Return Home Button */
-    .home-link {
-      margin-top: 2rem;
-      display: inline-block;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--primary);
-      text-decoration: none;
-      padding: 0.8rem 1.4rem;
-      border-radius: 8px;
-      background: var(--card-bg);
-      box-shadow: 0 4px 12px var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .card p {
+      margin-bottom: 0.6rem;
+      font-size: 1.05rem;
     }
 
-    .home-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-      text-decoration: underline;
-    }
-
+    /* Footer */
     footer {
       background: var(--secondary);
       color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 
 <body>
+
+<!-- Return Home Page Link -->
+<a class="home-link" href="index.html">← Return to Home Page</a>
 
 <header>
   <h1>Projects & Research Grants</h1>
@@ -120,54 +128,46 @@
 
   <h2>List of Funded Projects</h2>
 
-  <!-- Project 5 -->
   <div class="card">
-    <div class="project-title">5. Future Artificial Intelligence Research – FAIR</div>
-    <p><span class="label">Funding Body:</span> The European Union NextGenerationEU</p>
-    <p><span class="label">Funding Amount:</span> 581,949.52 Euro</p>
-    <p><span class="label">Research Task:</span> Fundamentals of Computer Vision, Pattern Recognition, and Machine Learning for Multimodal Data Analysis in Pervasive Solutions</p>
-    <p><span class="label">Timing:</span> 2023–2025</p>
+    <div class="project-title">5. Future Artificial Intelligence Research (FAIR)</div>
+    <p><span class="label">Funding Body:</span> European Union – NextGenerationEU</p>
+    <p><span class="label">Funding Amount:</span> €581,949.52</p>
+    <p><span class="label">Research Task:</span> Fundamentals of Computer Vision, Pattern Recognition, and Machine Learning for multimodal data analysis in pervasive AI systems</p>
+    <p><span class="label">Duration:</span> 2023–2025</p>
     <p><span class="label">Role:</span> CNR Unit Researcher</p>
   </div>
 
-  <!-- Project 4 -->
   <div class="card">
-    <div class="project-title">4. BSM-DND: Bias and Sensitivity-Aware Multilingual Deepfake News Detection</div>
+    <div class="project-title">4. BSM-DND: Bias & Sensitivity-Aware Multilingual Deepfake News Detection</div>
     <p><span class="label">Funding Body:</span> Deanship of Scientific Research, King Faisal University, Saudi Arabia</p>
     <p><span class="label">Funding Amount:</span> 30,000 SAR</p>
-    <p><span class="label">Timing:</span> 2024–2025</p>
+    <p><span class="label">Duration:</span> 2024–2025</p>
     <p><span class="label">Role:</span> Consultant</p>
   </div>
 
-  <!-- Project 3 -->
   <div class="card">
     <div class="project-title">3. INST023: Energy-Efficient UAV Management for Agricultural Monitoring</div>
     <p><span class="label">Funding Body:</span> Deputyship for Research & Innovation, Ministry of Education, Saudi Arabia</p>
     <p><span class="label">Funding Amount:</span> 30,000 SAR</p>
-    <p><span class="label">Timing:</span> 2022–2023</p>
+    <p><span class="label">Duration:</span> 2022–2023</p>
     <p><span class="label">Role:</span> Consultant</p>
   </div>
 
-  <!-- Project 2 -->
   <div class="card">
-    <div class="project-title">2. INST026: EETO-GA – Energy Efficient Trajectory Optimization of UAV-IoT Systems</div>
+    <div class="project-title">2. INST026: EETO-GA – Energy-Efficient Trajectory Optimization of UAV-IoT Systems</div>
     <p><span class="label">Funding Body:</span> Deputyship for Research & Innovation, Ministry of Education, Saudi Arabia</p>
     <p><span class="label">Funding Amount:</span> 30,000 SAR</p>
-    <p><span class="label">Timing:</span> 2022–2023</p>
+    <p><span class="label">Duration:</span> 2022–2023</p>
     <p><span class="label">Role:</span> Consultant</p>
   </div>
 
-  <!-- Project 1 -->
   <div class="card">
     <div class="project-title">1. IFT20046: TFBN – High-Performance Hierarchical Interconnection Network</div>
     <p><span class="label">Funding Body:</span> Deputyship for Research & Innovation, Ministry of Education, Saudi Arabia</p>
     <p><span class="label">Funding Amount:</span> 30,000 SAR</p>
-    <p><span class="label">Timing:</span> 2020</p>
+    <p><span class="label">Duration:</span> 2020</p>
     <p><span class="label">Role:</span> Consultant</p>
   </div>
-
-  <!-- Return Home Page Link -->
-  <a class="home-link" href="index.html">← Return to Home Page</a>
 
 </div>
 
