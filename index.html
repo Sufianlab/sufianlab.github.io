@@ -90,4 +90,72 @@
       padding: 2rem 1.5rem;
       text-align: center;
       background: white;
-      border
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .visitor-map h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      color: var(--secondary);
+    }
+
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Formal Education</a>
+      <a href="publication.html">Research & Publication</a>
+      <a href="repository.html">GitHub Repository</a>
+      <a href="project.html">Project</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+      <a href="find.html">Find Me</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h3>Welcome to My Academic Website</h3>
+    <h2>Dr. Abu Sufian</h2>
+    <h1>Postdoctoral Researcher (Senior Fellowship)</h1>
+    <h1>National Research Council of Italy – CNR-ISASI, Lecce, Italy</h1>
+    <h3>&</h3>
+    <h1>Assistant Professor (Currently on Sabbatical)</h1>
+    <h1>Department of Computer Science, University of Gour Banga, India</h1>
+  </section>
+
+  <!-- Visitor Map -->
+  <section class="visitor-map">
+    <h2>Visitor Map</h2>
+
+    <!-- ClustrMaps Globe Widget -->
+    <script
+      type="text/javascript"
+      id="clstr_globe"
+      src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
+    </script>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Dr. Abu Sufian · Academic Website
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
