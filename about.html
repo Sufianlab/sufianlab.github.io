@@ -66,4 +66,92 @@
     /* Content Container */
     .container {
       max-width: 900px;
-      mar
+      margin: 3.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 1.85rem;
+      margin-bottom: 1.8rem;
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+      font-size: 1.05rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Return Home Page Link -->
+<a class="home-link" href="index.html">← Home</a>
+
+<header>
+  <h1>About Dr. Abu Sufian</h1>
+</header>
+
+<div class="container">
+  <div class="card">
+
+    <h2>Professional Biography</h2>
+
+    <p>
+      I am Dr. Abu Sufian, a researcher (Senior Fellowship) at the National Research Council of Italy (CNR),
+      Institute of Applied Sciences and Intelligent Systems (CNR-ISASI). Since 2024, I have been contributing
+      to the national consortium project Future Artificial Intelligence Research (FAIR, 2023–2025),
+      focusing on responsible and trustworthy AI systems.
+    </p>
+
+    <p>
+      I have over 14 years of academic experience, including nine years as an Assistant Professor at the
+      University of Gour Banga, India, where I also served as Head of the Department of Computer Science
+      and led curriculum development initiatives. I earned my Ph.D. in Computer Science from
+      Visva-Bharati University, India.
+    </p>
+
+    <p>
+      My research lies at the intersection of Computer Vision, Deep Learning, and Generative AI, with
+      applications in Biometrics, Media Forensics, and Healthcare. My work emphasizes AI Fairness,
+      Bias Mitigation, and Explainability, aiming to develop equitable and transparent AI systems.
+    </p>
+
+    <p>
+      I have authored 50+ peer-reviewed publications in venues such as IEEE Access, Pattern Recognition,
+      Knowledge-Based Systems, ICCV, and ECCV, accumulating 2,600+ citations (Google Scholar).
+      I am a Senior Member of IEEE and a Lifetime Member of the Computer Society of India.
+    </p>
+
+  </div>
+</div>
+
+<footer>
+  © <span id="year"></span> Dr. Abu Sufian · Academic Website
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
