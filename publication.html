@@ -1,6 +1,176 @@
-.container {
-  max-width: 900px;
-  margin: 2.2rem auto;   /* was 3.5rem */
-  padding: 0 1.5rem;
-  text-align: center;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Research & Publications | Dr. Abu Sufian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --primary: #2563eb;
+      --secondary: #111827;
+      --card-bg: #ffffff;
+      --shadow: rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    /* Fixed Home Link */
+    .home-link {
+      position: fixed;
+      top: 1.2rem;
+      left: 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: white;
+      box-shadow: 0 2px 8px var(--shadow);
+      z-index: 1000;
+    }
+
+    /* Header */
+    header {
+      background: var(--secondary);
+      color: white;
+      padding: 2.4rem 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Content */
+    .container {
+      max-width: 900px;
+      margin: 2.2rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    /* Research Statement */
+    .research-statement {
+      background: var(--card-bg);
+      padding: 1.8rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+      max-width: 820px;
+      margin: 0 auto 1.8rem;
+      text-align: left;
+    }
+
+    .research-statement p {
+      font-size: 1.05rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .research-statement p:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.4rem;
+      color: var(--secondary);
+    }
+
+    /* Profile Cards */
+    .card {
+      background: var(--card-bg);
+      padding: 1.4rem;
+      margin: 0.8rem auto;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+      max-width: 600px;
+    }
+
+    .card a {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 1.8rem;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="home-link" href="index.html">← Return to Home Page</a>
+
+<header>
+  <h1>Research & Publication Profiles</h1>
+</header>
+
+<div class="container">
+
+  <div class="research-statement">
+    <p>
+      ⦿ I am an academic driven by a motivation to make artificial intelligence more responsible,
+      transparent, and equitable. My research focuses on Computer Vision, Deep Learning, and Generative AI,
+      with applications in Media Forensics, Biometrics, and Healthcare, examined through the lens of
+      AI Fairness, Bias Mitigation, and Explainability.
+    </p>
+    <p>
+      ⦿ I believe that the most impactful innovations emerge at the intersection of disciplines and
+      meaningful discussions. Accordingly, I am deeply committed to engaging with domain experts and
+      researchers across diverse fields to push the boundaries of what is technically possible, while
+      ensuring that AI systems are designed to serve all sections of society fairly and responsibly.
+    </p>
+  </div>
+
+  <h2>Explore My Research Contributions</h2>
+
+  <div class="card">
+    <a href="https://scholar.google.co.in/citations?hl=en&user=MZE2VskAAAAJ&sortby=pubdate&view_op=list_works" target="_blank">
+      Google Scholar Profile →
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=57136686600" target="_blank">
+      Scopus Author Page →
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Dr. Abu Sufian · Academic Website
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
