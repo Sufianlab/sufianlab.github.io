@@ -34,15 +34,16 @@
       padding: 1.3rem 2rem;
     }
 
-    /* 🔹 Header navigation (tightened spacing) */
+    /* Header navigation: balanced spacing */
     nav {
       display: flex;
-      flex-wrap: nowrap; /* ⬅️ force single line on desktop */
+      flex-wrap: nowrap;
+      align-items: center;
     }
 
     nav a {
       color: white;
-      margin-right: 1.1rem;        /* ⬅️ reduced spacing */
+      margin-right: 1.25rem;   /* ✅ balanced spacing */
       text-decoration: none;
       font-weight: 500;
       font-size: 1.05rem;
@@ -61,7 +62,7 @@
       min-height: calc(100vh - 90px);
     }
 
-    /* Left: Hero */
+    /* Left: Hero (center aligned) */
     .hero {
       background: var(--primary);
       color: white;
@@ -69,7 +70,8 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      text-align: left;
+      align-items: center;      /* ⬅️ center horizontally */
+      text-align: center;       /* ⬅️ center text */
     }
 
     .hero h3 {
@@ -82,8 +84,8 @@
     .hero h2 {
       color: var(--hero-name);
       font-size: 2.6rem;
-      margin: 0.8rem 0;
       font-weight: 700;
+      margin: 0.8rem 0;
     }
 
     .hero h1 {
@@ -93,12 +95,11 @@
     }
 
     /* Centered ampersand */
-    .hero .ampersand {
-      text-align: center;          /* ⬅️ centered */
+    .ampersand {
       font-size: 1.4rem;
-      margin: 0.6rem 0;            /* ⬅️ same vertical spacing */
       font-weight: 500;
       color: var(--hero-welcome);
+      margin: 0.6rem 0;
     }
 
     /* Right: Visitor Map */
@@ -122,7 +123,7 @@
       }
 
       nav {
-        flex-wrap: wrap; /* allow wrap on mobile */
+        flex-wrap: wrap;
       }
 
       nav a {
@@ -133,7 +134,6 @@
       .hero,
       .visitor-map {
         padding: 3rem 2rem;
-        text-align: center;
       }
     }
   </style>
