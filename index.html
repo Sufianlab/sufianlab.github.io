@@ -43,33 +43,35 @@
 
     nav a:hover { color: var(--primary); }
 
-    /* ===== Split Layout (GRID, not FLEX) ===== */
+    /* ===== Split Layout ===== */
     .split-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: calc(100vh - 80px);
     }
 
-    /* Left */
+    /* Left: Hero */
     .hero {
       background: var(--primary);
       color: white;
-      padding: 4rem 3rem;
+      padding: 3.5rem 3rem 4rem; /* ⬅️ more top bias */
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* ⬅️ move content upward */
     }
 
     .hero h3 {
       color: var(--hero-welcome);
       font-size: 1.4rem;
       margin-bottom: 0.6rem;
+      font-weight: 500;
     }
 
     .hero h2 {
       color: var(--hero-name);
       font-size: 2.6rem;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     .hero h1 {
@@ -78,10 +80,10 @@
       margin-top: 0.4rem;
     }
 
-    /* Right */
+    /* Right: Visitor Map */
     .visitor-map {
       background: #ffffff;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       text-align: center;
     }
 
@@ -91,11 +93,6 @@
       color: var(--secondary);
     }
 
-    /* IMPORTANT: Plain container */
-    #clstr_globe {
-      margin: 0 auto;
-    }
-
     footer {
       background: var(--secondary);
       color: white;
@@ -103,7 +100,7 @@
       padding: 2rem;
     }
 
-    /* Mobile */
+    /* Responsive */
     @media (max-width: 900px) {
       .split-layout {
         grid-template-columns: 1fr;
@@ -147,16 +144,14 @@
     <h1>Department of Computer Science, University of Gour Banga, India</h1>
   </div>
 
-  <!-- Right: Visitor Map -->
+  <!-- Right -->
   <div class="visitor-map">
-
-    <!-- DO NOT WRAP / SCALE THIS -->
+    <h2>Visitor Map</h2>
     <script
       type="text/javascript"
       id="clstr_globe"
       src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
     </script>
-
   </div>
 
 </section>
