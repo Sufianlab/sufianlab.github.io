@@ -20,66 +20,56 @@
       --hero-name: #fde68a;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
     }
 
     header {
       background: var(--secondary);
       color: white;
       padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
     nav a {
       color: white;
-      margin-left: 1.2rem;
+      margin-right: 1.2rem;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: var(--primary);
-    }
+    nav a:hover { color: var(--primary); }
 
-    /* ===== Split Layout ===== */
+    /* ===== Split Layout (GRID, not FLEX) ===== */
     .split-layout {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       min-height: calc(100vh - 80px);
     }
 
-    /* Left panel */
+    /* Left */
     .hero {
-      flex: 1;
-      padding: 4rem 3rem;
       background: var(--primary);
       color: white;
+      padding: 4rem 3rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
     .hero h3 {
+      color: var(--hero-welcome);
       font-size: 1.4rem;
       margin-bottom: 0.6rem;
-      color: var(--hero-welcome);
     }
 
     .hero h2 {
+      color: var(--hero-name);
       font-size: 2.6rem;
       margin-bottom: 1rem;
-      color: var(--hero-name);
     }
 
     .hero h1 {
@@ -88,16 +78,11 @@
       margin-top: 0.4rem;
     }
 
-    /* Right panel */
+    /* Right */
     .visitor-map {
-      flex: 1;
-      background: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: #ffffff;
       padding: 2rem;
-      overflow: hidden; /* 🔑 important */
+      text-align: center;
     }
 
     .visitor-map h2 {
@@ -106,20 +91,9 @@
       color: var(--secondary);
     }
 
-    /* Globe container FIX */
-    .globe-container {
-      width: 100%;
-      max-width: 420px;
-      height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .globe-wrapper {
-      transform: scale(0.55);
-      transform-origin: center center;
+    /* IMPORTANT: Plain container */
+    #clstr_globe {
+      margin: 0 auto;
     }
 
     footer {
@@ -129,19 +103,15 @@
       padding: 2rem;
     }
 
-    /* Responsive */
+    /* Mobile */
     @media (max-width: 900px) {
       .split-layout {
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
 
       .hero, .visitor-map {
         padding: 3rem 2rem;
         text-align: center;
-      }
-
-      .globe-wrapper {
-        transform: scale(0.5);
       }
     }
   </style>
@@ -181,15 +151,12 @@
   <div class="visitor-map">
     <h2>Visitor Map</h2>
 
-    <div class="globe-container">
-      <div class="globe-wrapper">
-        <script
-          type="text/javascript"
-          id="clstr_globe"
-          src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
-        </script>
-      </div>
-    </div>
+    <!-- DO NOT WRAP / SCALE THIS -->
+    <script
+      type="text/javascript"
+      id="clstr_globe"
+      src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
+    </script>
 
   </div>
 
