@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Dr. Abu Sufian | Academic Website</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Search Console Verification -->
@@ -61,7 +59,7 @@
       min-height: calc(100vh - 80px);
     }
 
-    /* Left: Hero */
+    /* Left panel */
     .hero {
       flex: 1;
       padding: 4rem 3rem;
@@ -76,14 +74,12 @@
       font-size: 1.4rem;
       margin-bottom: 0.6rem;
       color: var(--hero-welcome);
-      font-weight: 500;
     }
 
     .hero h2 {
       font-size: 2.6rem;
       margin-bottom: 1rem;
       color: var(--hero-name);
-      font-weight: 700;
     }
 
     .hero h1 {
@@ -92,15 +88,16 @@
       margin-top: 0.4rem;
     }
 
-    /* Right: Visitor Map */
+    /* Right panel */
     .visitor-map {
       flex: 1;
       background: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 3rem 2rem;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden; /* 🔑 important */
     }
 
     .visitor-map h2 {
@@ -109,13 +106,22 @@
       color: var(--secondary);
     }
 
-    .globe-wrapper {
-      transform: scale(0.6);
-      transform-origin: top center;
-      margin-top: -10px;
+    /* Globe container FIX */
+    .globe-container {
+      width: 100%;
+      max-width: 420px;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
-    /* Footer */
+    .globe-wrapper {
+      transform: scale(0.55);
+      transform-origin: center center;
+    }
+
     footer {
       background: var(--secondary);
       color: white;
@@ -123,7 +129,7 @@
       padding: 2rem;
     }
 
-    /* ===== Responsive (Mobile) ===== */
+    /* Responsive */
     @media (max-width: 900px) {
       .split-layout {
         flex-direction: column;
@@ -135,7 +141,7 @@
       }
 
       .globe-wrapper {
-        transform: scale(0.55);
+        transform: scale(0.5);
       }
     }
   </style>
@@ -158,10 +164,9 @@
   </nav>
 </header>
 
-<!-- Split Layout -->
 <section class="split-layout">
 
-  <!-- Left: Hero -->
+  <!-- Left -->
   <div class="hero">
     <h3>Welcome to My Academic Website</h3>
     <h2>Dr. Abu Sufian</h2>
@@ -172,16 +177,20 @@
     <h1>Department of Computer Science, University of Gour Banga, India</h1>
   </div>
 
-  <!-- Right: Visitor Map -->
+  <!-- Right -->
   <div class="visitor-map">
     <h2>Visitor Map</h2>
-    <div class="globe-wrapper">
-      <script
-        type="text/javascript"
-        id="clstr_globe"
-        src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
-      </script>
+
+    <div class="globe-container">
+      <div class="globe-wrapper">
+        <script
+          type="text/javascript"
+          id="clstr_globe"
+          src="//clustrmaps.com/globe.js?d=IT9TGh41T30pxWvofuN-gRJl8gqxTOfU8789MSsP04M">
+        </script>
+      </div>
     </div>
+
   </div>
 
 </section>
