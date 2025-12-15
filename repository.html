@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Repositories | Dr. Abu Sufian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --primary: #2563eb;
+      --secondary: #111827;
+      --card-bg: #ffffff;
+      --shadow: rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--secondary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--secondary);
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
+      max-width: 600px;
+      margin: 1.2rem auto;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>My Code Repositories</h1>
+</header>
+
+<div class="container">
+  <h2>Explore My GitHub Work</h2>
+
+  <div class="card">
+    <a href="https://github.com/Sufianlab/" target="_blank">
+      Visit My GitHub Profile →
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Dr. Abu Sufian · Academic Website
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
