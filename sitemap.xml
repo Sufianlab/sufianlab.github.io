@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://sufianlab.github.io/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/about.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/experience.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/education.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/publication.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/project.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/teaching.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/repository.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/find.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://sufianlab.github.io/news.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
